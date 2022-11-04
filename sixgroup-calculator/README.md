@@ -7,9 +7,10 @@ As part of our application process, we'd like to see what you can produce by giv
 We would like you to create a sixgroup (六大類) calculator app. The features it should include:
 
 - [ ] Display a food record with a photo.
-- [ ] Display sixgroup items of the record. Items may include name and calorie.
+- [ ] Display sixgroup items of the record. Each item should display name and calories.
 - [ ] Display nutrition summary of the record. Use donut chart to show record's calorie percentage from three macro nutritions.
-- [ ] Add sixgroup items to the record. Items may take name and sixgroup info as inputs.
+- [ ] A user can add sixgroup items to the record. Each item may take name and sixgroup portions as input.
+- [ ] A user can edit existing sixgroup items of the record.
 
 ### Instructions
 
@@ -34,14 +35,15 @@ We would like you to create a sixgroup (六大類) calculator app. The features 
   ![alt text](./assets/input_layout.png "Title")
 
 - Each sixgroup or sub-group (except for `milk` and `meat_beans`) has its nutrition definition in terms of weight (g) of three macro nutritions (`protein`, `carbohydrate` and `fat`) defined in [Constants.js](./src/Constants.js)
-- how calories is calculated: `sixgroup portions` -> `weights of three macros` -> `calories of three macros` -> `total calories`. All the numbers required is in [Constants.js](./src/Constants.js)
+- How calories is calculated: `sixgroup portions` -> `weights of three macros` -> `calories of three macros` -> `total calories`. All the numbers required is in [Constants.js](./src/Constants.js)
 - Nutrition summary of the record should contain:
   - **total calorie**
   - **calorie percentage** from each of the three macro nutritions, total 100% (ex. `{protein: 0.25, fat: 0.3, carbohydrate: 0.45}` )
-  - **total of each sixgroup**, ex: a record with item#1 `{fat: 2, meat_beans_low_fat: 1, grains: 2}` and item#2 `{fat: 1, meat_beans_low_fat: 3, fruit: 1.5}` should have `{fat: 3, meat_beans_low_fat: 4, grains: 2, fruit: 1.5}` as total of each sixgroup
+  - **total of each sixgroup**, ex: a record with item#1 `{name: '炸蛋蔥油餅', fat: 2, meat_beans_low_fat: 1, grains: 2}` and item#2 `{name: '水果甜點', fat: 1, meat_beans_low_fat: 3, fruit: 1.5}` should have `{fat: 3, meat_beans_low_fat: 4, grains: 2, fruit: 1.5}` as total portions of each sixgroup
 
 ### Extra credit features
 
+- [ ] Clear commit history
 - [ ] Responsive, works in desktop and mobile
 - [ ] Polish and UX
 - [ ] Highly reusable components
